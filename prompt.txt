@@ -1,0 +1,22 @@
+Parceiro de negócio -> Inbound e Outbouding;
+
+
+Fazer um MVP de conseguir exportar todos os campos e importar(modificar os dados do parceiro de negócio) -> dentro dos dados que a api sap permite
+
+Fazer um "Mapping de campos" no outbouding.
+
+Então por exemplo, no fiori UI o cara vai ter a opção de fazer o mapa de campos então
+Eu preciso enviar para o cliente xpto o json ao inves de BusinessPartnerName eu quero enviar NomeParceiroNegocios
+
+Então seria um dropdown com os campos que já existem que estão cadastrados e os campos que o usuário vai preencher, estilo chave - valor
+
+
+----------------
+
+
+Então cria um MVP pra mim, mas vamos começar quebrando em partes.
+  -------- 
+
+
+
+Precisa ser usando o formato abapGIT, então as classes, behavior definitions e implementations seguindo esse padrão.

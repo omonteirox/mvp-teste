@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "skills": {
+    "sap-abap": {
+      "source": "secondsky/sap-skills",
+      "sourceType": "github",
+      "computedHash": "a7f059cfda4fb971da303fb10017822af18596391d960a12d18d712b92144abe"
+    },
+    "sap-abap-cds": {
+      "source": "secondsky/sap-skills",
+      "sourceType": "github",
+      "computedHash": "2cd50ae1a50601e3e1e5e527494f18312b9e602e503f2a6fd4ef9c7bf6fab6b6"
+    },
+    "sap-btp-best-practices": {
+      "source": "secondsky/sap-skills",
+      "sourceType": "github",
+      "computedHash": "449d4e7857022cfdb35805fcdbdc2fdc5487119563af9cdabee9e75f91884101"
+    },
+    "sap-btp-developer-guide": {
+      "source": "secondsky/sap-skills",
+      "sourceType": "github",
+      "computedHash": "5260a595828428b005aa3bebbb0c3d8c7733586cd257b58a286142dc38067fd9"
+    },
+    "sap-btp-intelligent-situation-automation": {
+      "source": "secondsky/sap-skills",
+      "sourceType": "github",
+      "computedHash": "6780abc14dbfe8bc2d199cc005cb88d38b62811e967f92ba6054a786790f89fa"
+    },
+    "sap-btp-job-scheduling": {
+      "source": "secondsky/sap-skills",
+      "sourceType": "github",
+      "computedHash": "df2c5ac833c364bfd525f45be4e87aa9422a5ad0daa3a70195a2c2807998d79b"
+    },
+    "sap-btp-master-data-integration": {
+      "source": "secondsky/sap-skills",
+      "sourceType": "github",
+      "computedHash": "2629c6deffa72123290c48aa3e7363c187d247e88ee256f49007452378c5734f"
+    },
+    "sap-fiori-tools": {
+      "source": "secondsky/sap-skills",
+      "sourceType": "github",
+      "computedHash": "7ddad64624b06366aaee16422334c3cae237d48aa4fd250663c35849b4600456"
+    },
+    "sapui5-cli": {
+      "source": "secondsky/sap-skills",
+      "sourceType": "github",
+      "computedHash": "592f8ef485613939c651098789db1291dd5441a4e1f8275bba733e9f635783c6"
+    }
+  }
+}
