@@ -39,6 +39,8 @@ authorization master ( global )
   draft determine action Prepare
   {
     validation ValidateRecipientName;
+    validation FieldMapping~ValidateTargetFieldName;
+    validation FieldMapping~ValidateDuplicateSourceField;
   }
 
   association _FieldMapping { create; with draft; }
@@ -86,11 +88,6 @@ etag master LocalLastChangedAt
 
   determination SetFieldDefaults on modify { create; }
 
-  draft determine action Prepare
-  {
-    validation ValidateTargetFieldName;
-    validation ValidateDuplicateSourceField;
-  }
 
   association _Recipient { with draft; }
 
