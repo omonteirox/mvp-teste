@@ -5,7 +5,7 @@
    <BDEF>
     <BDEF_NAME>ZC_BPMAPRECIPIENT</BDEF_NAME>
     <DDLANGUAGE>E</DDLANGUAGE>
-    <DDTEXT>BP Field Mapping - Projection Behavior</DDTEXT>
+    <DESCRIPTION>BP Field Mapping - Projection Behavior</DESCRIPTION>
    </BDEF>
   </asx:values>
  </asx:abap>

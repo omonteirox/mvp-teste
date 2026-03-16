@@ -5,7 +5,7 @@
    <SRVD>
     <SRVD_NAME>ZUI_BPMAPRECIPIENT_O4</SRVD_NAME>
     <DDLANGUAGE>E</DDLANGUAGE>
-    <DDTEXT>BP Field Mapping Service</DDTEXT>
+    <DESCRIPTION>BP Field Mapping Service</DESCRIPTION>
    </SRVD>
   </asx:values>
  </asx:abap>
