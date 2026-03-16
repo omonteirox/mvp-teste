@@ -9,7 +9,8 @@
   description: { type: #STANDARD, value: 'RecipientId' }
 }
 
-define view entity ZC_BpMapRecipient
+define root view entity ZC_BpMapRecipient
+  provider contract transactional_query
   as projection on ZI_BpMapRecipient
 {
       @UI.facet: [

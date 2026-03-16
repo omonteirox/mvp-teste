@@ -6,7 +6,7 @@
   sizeCategory: #S,
   dataClass: #TRANSACTIONAL
 }
-define view entity ZI_BpMapRecipient
+define root view entity ZI_BpMapRecipient
   as select from zdez_map_recip as Recipient
 
   composition [0..*] of ZI_BpMapField as _FieldMapping
