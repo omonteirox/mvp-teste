@@ -1,0 +1,110 @@
+managed implementation in class ZBP_I_BpMapRecipient unique;
+strict ( 2 );
+with draft;
+
+define behavior for ZI_BpMapRecipient alias Recipient
+persistent table zdez_map_recip
+draft table zdez_d_map_rec
+etag master LocalLastChangedAt
+lock master total etag LastChangedAt
+authorization master ( global )
+{
+  field ( readonly )
+    RecipientUUID,
+    CreatedBy,
+    CreatedAt,
+    LastChangedBy,
+    LastChangedAt,
+    LocalLastChangedAt;
+
+  field ( numbering : managed )
+    RecipientUUID;
+
+  create;
+  update;
+  delete;
+
+  determination SetDefaultSourceEntity on modify { create; }
+
+  validation ValidateRecipientName on save { create; update; field RecipientName; }
+
+  action previewJson
+    parameter ZA_BpPreviewJsonResult
+    result [1] ZA_BpPreviewJsonResult;
+
+  draft action Resume;
+  draft action Edit;
+  draft action Activate optimized;
+  draft action Discard;
+  draft determine action Prepare
+  {
+    validation ValidateRecipientName;
+  }
+
+  association _FieldMapping { create; with draft; }
+
+  mapping for zdez_map_recip corresponding
+  {
+    RecipientUUID      = recipient_uuid;
+    RecipientId        = recipient_id;
+    RecipientName      = recipient_name;
+    Description        = description;
+    SourceEntity       = source_entity;
+    IsActive           = is_active;
+    CreatedBy          = created_by;
+    CreatedAt          = created_at;
+    LastChangedBy      = last_changed_by;
+    LastChangedAt      = last_changed_at;
+    LocalLastChangedAt = local_last_changed_at;
+  }
+}
+
+define behavior for ZI_BpMapField alias FieldMapping
+persistent table zdez_map_field
+draft table zdez_d_map_fld
+lock dependent by _Recipient
+authorization dependent by _Recipient
+etag master LocalLastChangedAt
+{
+  field ( readonly )
+    FieldUUID,
+    ParentUUID,
+    CreatedBy,
+    CreatedAt,
+    LastChangedBy,
+    LastChangedAt,
+    LocalLastChangedAt;
+
+  field ( numbering : managed )
+    FieldUUID;
+
+  update;
+  delete;
+
+  validation ValidateTargetFieldName on save { create; update; field TargetFieldName; }
+  validation ValidateDuplicateSourceField on save { create; update; field SourceFieldName; }
+
+  determination SetFieldDefaults on modify { create; }
+
+  draft determine action Prepare
+  {
+    validation ValidateTargetFieldName;
+    validation ValidateDuplicateSourceField;
+  }
+
+  association _Recipient { with draft; }
+
+  mapping for zdez_map_field corresponding
+  {
+    FieldUUID          = field_uuid;
+    ParentUUID         = parent_uuid;
+    SourceFieldName    = source_field_name;
+    TargetFieldName    = target_field_name;
+    IsActive           = is_active;
+    CreatedBy          = created_by;
+    CreatedAt          = created_at;
+    LastChangedBy      = last_changed_by;
+    LastChangedAt      = last_changed_at;
+    LocalLastChangedAt = local_last_changed_at;
+  }
+}

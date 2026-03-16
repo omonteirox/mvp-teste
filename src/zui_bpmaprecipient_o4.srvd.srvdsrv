@@ -1,0 +1,6 @@
+@EndUserText.label: 'BP Field Mapping Service'
+define service ZUI_BpMapRecipient_O4 {
+  expose ZC_BpMapRecipient as Recipient;
+  expose ZC_BpMapField     as FieldMapping;
+  expose ZI_BpSourceField  as BpSourceField;
+}
